@@ -1,0 +1,6 @@
+ {<News pageSize="9" category="sports"/> }
+ {<News pageSize="9" category="business"/>}
+ {<News pageSize="9" category="general"/> }
+  {<News pageSize="9" category="science"/> } 
+  {<News pageSize="9" category="technolgy"/> } 
+  {<News pageSize="9" category="entertainment"/> }

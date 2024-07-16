@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import News from './components/News'
+import Navbar from './Navbar/Navbar'
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+// Link,
+  Routes
+} from "react-router-dom";
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+      <Navbar/>
+      <Routes>
+        <Route exact path='/sports'  element={<News key="sport" pageSize="9" category="sports"/> }> </Route>
+        <Route exact path='/business'  element={<News key="business" pageSize="9" category="business"/> }></Route>
+        <Route exact path='/'  element={<News  key="general"pageSize="9" category="general"/> }></Route>
+        <Route exact path='/science'  element={<News key="science"pageSize="9" category="science"/> }></Route>
+        <Route exact path='/technology'  element={<News key="technology"pageSize="9" category="technology"/> }></Route>
+        <Route exact path='/entertainment'  element={<News key="entertainment" pageSize="9" category="entertainment"/> }> </Route>
+     
+      </Routes>
+      </Router>
+     
+    
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
